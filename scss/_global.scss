@@ -1,0 +1,58 @@
+/* footer at bottom */
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  min-width: 375px;
+}
+
+main {
+  flex-grow: 1;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font: 16px/1.63 $base-font;
+  position: relative;
+}
+
+/* main container */
+.container {
+  max-width: 1600px;
+  padding-left: 30px;
+  padding-right: 30px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* headers */ 
+h1 {
+  font: $bold 38px/1.27 $base-font;
+  background: $gradient-redtext-background;
+  background-clip: text;
+  color: transparent;
+}
+
+h2 {
+  font: $bold 30px/1.22 $base-font;
+
+  @media screen and (min-width: $tablet-sd) {
+    font-size: 38px;
+  }
+}
+
+h3 {
+  font: $bold 22px/1.23 $base-font;
+}
+
+h4 {
+  font: $bold 16px/1.26 $base-font;
+}
+
+/* other */
+a {
+  font: $bold 16px/1.26 $base-font;
+}

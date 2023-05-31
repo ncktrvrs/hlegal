@@ -1,0 +1,134 @@
+.footer {
+  padding-top: 30px;
+  padding-bottom: 30px;
+  background: $grey-background-color;
+
+  &-wrapper {
+    padding-left: 0;
+    padding-right: 0;
+    margin-left: 30px;
+    margin-right: 30px;
+  }
+
+  .container {
+    display: grid;
+    justify-content: center;
+
+    @media screen and (min-width: $tablet-sd) {
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-rows: repeat(2, 50px);
+    }
+  }
+
+  &__address,
+  &__contacts,
+  &__copyrights {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    @media screen and (min-width: $tablet-sd) {
+      flex-direction: row;
+
+      >*:not(:last-child) {
+        &::after {
+          content: ' ';
+          display: inline-block;
+          margin: 6px 10px;
+          width: 6px;
+          height: 6px;
+          border-radius: 50%;
+          background-color: $grey-text-color;
+        }
+      }
+    }
+  }
+
+  &__address {
+    margin-bottom: 21px;
+  }
+
+  &__address-text {
+    color: $main-regular-color;
+    margin-bottom: 10px;
+
+    @media screen and (min-width: $tablet-sd) {
+      display: flex;
+      align-items: center;
+      margin-bottom: 0;
+    }
+  }
+
+  &__address-map-link {
+    font: $bold 12px/1.25 $base-font;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: $active-regular-color;
+
+    &:hover,
+    &:focus,
+    &:active {
+      color: $accent-color;
+    }
+    @media screen and (min-width: $tablet-sd) {
+      margin-bottom: 0;
+    }
+  }
+
+  &__contacts {
+    margin-bottom: 30px;
+
+    @media screen and (min-width: $tablet-sd) {
+      margin-bottom: 0;
+      grid-column: 1/span 2;
+      grid-row: 2/3;
+    }
+  }
+
+  .fb {
+    margin-bottom: 10px;
+
+    @media screen and (min-width: $tablet-sd) {
+      display: flex;
+      align-items: center;
+      margin-bottom: 0;
+    }
+  }
+
+  &__phone {
+    color: $main-alt-color;
+    margin-bottom: 10px;
+
+    &:hover,
+    &:focus,
+    &:active {
+      color: $accent-color;
+    }
+
+    @media screen and (min-width: $tablet-sd) {
+      display: flex;
+      align-items: center;
+      margin-bottom: 0;
+    }
+  }
+
+  &__email {
+    color: $active-regular-color;
+
+    &:hover,
+    &:focus,
+    &:active {
+      color: $accent-color;
+    }
+  }
+
+  &__copyrights {
+    color: $grey-text-color;
+
+    @media screen and (min-width: $tablet-sd) {
+      grid-column: 2/3;
+      justify-self: end;
+      margin-bottom: 21px;
+    }
+  }
+}

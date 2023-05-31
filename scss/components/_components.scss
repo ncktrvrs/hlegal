@@ -1,0 +1,112 @@
+.header__nav-toggle {
+  cursor: pointer;
+  transition: all 200ms ease-in-out;
+  padding: 15px 7px;
+
+  &-line,
+  &-line::after,
+  &-line::before {
+    content: '';
+    display: block;
+    width: 18px;
+    height: 2px;
+  }
+
+  &-line::before {
+    transform: translateY(-6px);
+  }
+
+  &-line::after {
+    transform: translateY(4px);
+  }
+}
+
+.header__nav-cross {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  padding: 15px 7px;
+
+
+  &-line,
+  &-line::after {
+    content: '';
+    display: block;
+    width: 18px;
+    height: 2px;
+    background-color: #EC6F5D;
+    transition: all;
+  }
+
+  &-line {
+    transform: rotate(45deg);
+  }
+
+  &-line::after {
+    transform: rotate(90deg);
+  }
+}
+
+.fb {
+  display: none;
+
+  @media screen and (min-width: $tablet-sd) {
+    display: flex;
+  }
+}
+
+.fb__icon--small {
+  height: 24px;
+  width: 24px;
+}
+
+.fb__icon--large {
+  height: 38px;
+  width: 38px;
+}
+
+.fb__icon--white>* {
+  fill: $main-text-color;
+}
+
+.fb__icon--grey>* {
+  fill: $grey-text-color;
+}
+
+.fb__icon--blue>* {
+  fill: $active-regular-color;
+}
+
+.fb:hover .fb__icon>*,
+.fb:focus .fb__icon>*,
+.fb:active .fb__icon>* {
+  fill: $accent-color;
+}
+
+.phone {
+  &--light {
+    color: $main-text-color;
+  }
+
+  &--dark {
+    color: $main-alt-color;
+  }
+}
+
+.button {
+  padding: 18px;
+  background-color: $active-regular-color;
+  box-shadow: 0px 0px 20px rgba(36, 163, 255, 0.5);
+  border-radius: 12px;
+  font: $bold 16px/1.25 $base-font;
+  color: $main-text-color;
+  text-align: center;
+
+  &:hover {
+    background-color: $active-hover-color;
+  }
+
+  &:active {
+    background-color: $active-active-color;
+  }
+}
